@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STAT Quiz Flashcards</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Statistics and Probability</p>
+      <h1>Quiz 4 Study Cards</h1>
+      <p class="hero-copy">
+        Review simulation, distributions, the Central Limit Theorem, confidence intervals, and hypothesis tests with a cleaner study flow than a stack of paper cards.
+      </p>
+      <div class="hero-actions">
+        <button id="shuffleBtn" class="primary-btn" type="button">Shuffle deck</button>
+        <button id="flipBtn" class="ghost-btn" type="button">Reveal answer</button>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="panel control-panel">
+        <div class="panel-head">
+          <h2>Study controls</h2>
+          <p>Filter by unit and move through the deck at your own pace.</p>
+        </div>
+
+        <div id="categoryFilters" class="filters" aria-label="Flashcard categories"></div>
+
+        <div class="stats">
+          <div>
+            <span class="stat-label">Cards in deck</span>
+            <strong id="deckCount">0</strong>
+          </div>
+          <div>
+            <span class="stat-label">Current card</span>
+            <strong id="cardPosition">0 / 0</strong>
+          </div>
+          <div>
+            <span class="stat-label">Topic</span>
+            <strong id="cardTopic">-</strong>
+          </div>
+        </div>
+
+        <div class="nav-buttons">
+          <button id="prevBtn" class="secondary-btn" type="button">Previous</button>
+          <button id="nextBtn" class="primary-btn" type="button">Next</button>
+        </div>
+      </section>
+
+      <section class="panel card-panel">
+        <div class="card-topline">
+          <span class="badge" id="cardCategory">Ready</span>
+          <span class="hint">Press Space to flip, arrows to move</span>
+        </div>
+
+        <article class="flashcard" id="flashcard" tabindex="0" aria-live="polite">
+          <div class="card-face card-front">
+            <p class="card-kicker">Question</p>
+            <h2 id="cardQuestion">Loading flashcards...</h2>
+          </div>
+          <div class="card-face card-back">
+            <p class="card-kicker">Answer</p>
+            <div id="cardAnswer" class="card-answer"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel list-panel">
+        <div class="panel-head">
+          <h2>Deck overview</h2>
+          <p>Jump directly to a concept when you want focused review.</p>
+        </div>
+        <div id="cardList" class="card-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
