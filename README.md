@@ -19,3 +19,6 @@ This project can be redeployed to Vercel with:
 ```powershell
 npx vercel --yes
 ```
+
+## App
+https://stat-flashcards-study-plan.vercel.app/
